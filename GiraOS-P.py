@@ -1,13 +1,17 @@
 copyright="GIRAsoft 2017/2018." # copy protection
 prodnum="GPN-PY-BE-GOSP08build1" # internal number for software cataloguing
++="+"
+-="-"
+/="/"
+*="*"
 # key="GIRASOFT" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="3 Mar 2018 @ 14:49 GMT" # build date for reference
-buildno="0.8 Beta, build 1.02 (8102)" # build information
-ver_="Beta 0.8 (8102)" # version printed by ver
+bd="3 Mar 2018 @ 14:50 GMT" # build date for reference
+buildno="0.8 Beta, build 1.03 (8103)" # build information
+ver_="Beta 0.8 (8103)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 calculate = "calculate"   # -
 test = "test"             #  |
@@ -28,7 +32,7 @@ sudostatus=0 # if not declared here, causes a crash after input of developer id
 #G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1   8     8
 #GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  88888   DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print "GiraOS/P ver 0.7 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
+print "GiraOS/P ver 0.8 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 # print("NOTE: Please input all non-numeric commands inside double quotes (\").") # FINALLY fixed
 # checkkey=input("Enter your product key >") # make sure this is legal
