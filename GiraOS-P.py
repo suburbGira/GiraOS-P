@@ -1,8 +1,8 @@
 copyright="GIRAsoft 2017-2020." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="30 May 2020 @ 00:17 BST" # build date for reference
-buildno="0.9 Beta, build 1.00 (9100)" # build information
-ver_="Beta 0.9 (9100)" # version printed by ver
+bd="30 May 2020 @ 00:28 BST" # build date for reference
+buildno="0.9 Beta, build 1.01 (9101)" # build information
+ver_="Beta 0.9 (9101)" # version printed by ver
 calculate = "calculate"   # -
 test = "test"             #  |
 verbose = "verbose"       #  |
@@ -29,17 +29,11 @@ while True:
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
 	if sudostatus != 1:
-		command = input("Applications: changelog, ver, calculate, sudo, exit >") # hooray for commands
+		command = input("Applications: ver, calc, sudo, stonks, exit >") # hooray for commands
 	else:
-		command = input("Applications: changelog, ver, calculate, sudo, buildtime, buildcheck, exit >")
-	if command == "changelog": # app name: changelog
-		print ("Changes in ",ver_,":")
-		print ("_________________________________________________________________")
-		print ("- | Removed developer ID references since software is now public")
-		print ("+ | Fixed bug when checking the copyright message that would have")
-		print ("  | 	prevented the software from starting")
-		print ("__|______________________________________________________________")
-	elif command == "ver": # app name: ver
+		command = input("Applications: ver, calc, sudo, buildtime, buildcheck, stonks, exit >")
+
+	if command == "ver": # app name: ver
 		print ("GiraOS/P Version",ver_,"Copyright",copyright) # print the version - like winver
 	elif command == "sudo":
 		if sudostatus == 1:
@@ -59,7 +53,28 @@ while True:
 			print("Error 06: not a superuser")
 		else:
 			print ("GiraOS/P version",buildno) # app name: buildcheck
-	elif command=="calculate":
+
+	elif command=="stonks":
+		# stonks - Tool to calculate if stonks have happened.
+		# Copyright GIRAsoft, Inc. 2020.
+		# Developed for GiraOS-P.
+		instonks=y
+		while instonks=y:
+			stonks1=input("Input first number: ")
+			stonks2=input("Now input second number: ")
+			if stonks1 > stonks2:
+				print("Not Stonks")
+			elif stonks2 > stonks1:
+				print("Stonks")
+			elif stonks1 == stonks2:
+				print("Neither Stonks or Not Stonks")
+			instonks=input("Another? (y/n): ")
+			if instonks != y:
+				if instonks != n:
+					print("Invalid answer, assuming no.")
+					instonks = n
+		
+	elif command=="calc":
 		# GIRAsoft Calculator copyight GIRAsoft, Inc. 2018.
 		# Developed for use in GiraOS-P.
 		y="y"
