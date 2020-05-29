@@ -1,10 +1,10 @@
 copyright="GIRAsoft 2017/2018." # copy protection
-prodnum="GPN-PY-BE-GOSP04build2" # internal number for software cataloguing
-key="ABCD-EFGH" # product key - antipiracy
+prodnum="GPN-PY-BE-GOSP05build1" # internal number for software cataloguing
+key="GIRA-BETA" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
-bd="5 Feb 2018 @ 12:11 GMT" # build date for reference
-buildno="0.4 Beta build 2:: build no 24"
+bd="5 Feb 2018 @ 12:23 GMT" # build date for reference
+buildno="0.5 Beta build 1:: build no 25"
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
@@ -16,7 +16,7 @@ buildno="0.4 Beta build 2:: build no 24"
 import sys # enable exiting from within
 print "GiraOS/P ver 0.4 build 2 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
-print("NOTE: Due to Python being weird, please use ONLY numbers as input unless otherwise specified.") # i don't know how to fix that, contact me if you do
+print("NOTE: Please input all non-numeric commands inside double quotes (\").") # kinda fixed
 checkkey=input("Enter your product key in double quotes (\") >") # make sure this is legal
 if checkkey != key:
 	print("Error 01: Invalid key") # o noez, we're illegal
@@ -31,8 +31,8 @@ while True:
 	if copyright != "GIRAsoft 2017/2018.": # make sure we're good
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
-	command = input("Enter 1 for test, 2 for verboseness, 3 to print the changelog or 10 to exit: ") # hooray for commands
-	if command == 1:
+	command = input("Applications: test, verbose, changelog, exit: ") # hooray for commands
+	if command == "test":
 		print("Testing") # app name: test
 		print("esting")
 		print("sting")
@@ -41,7 +41,7 @@ while True:
 		print("ng")
 		print("g")
 		print("done executing")
-	elif command == 2:
+	elif command == "verbose":
 		print("Expression of surprise or astonishment at the unintended performance of an undefined action!") # app name: verbose
 		print("I regret that the system which processes input as a series of ones and zeroes known as binary belonging to the organism known as a human who has been given the designation of me has performed an action which was not intended to be performed by its manufacturers!")
 		print("Additionally, the aforementioned problem has caused it to magnetise small spinning discs inside it in such a way that any data stored on them has been removed!")
@@ -51,11 +51,13 @@ while True:
 		print("The only computer software currently existing in the planet we are standing on which possesses the power to prevent the unintended magnetisation and/or demagnetisation of small spinning discs inside a system which processes input as a series of ones and zeroes known as binary in such a way that any data stored on them is lost!")
 		print("Use the organ known as a brain to perform the action of thinking beyond computer programs which prevent malicious computer programs entering systems which process input as a series of ones and zeros known as binary!")
 		print("Use the organ known as a brain to perform the action of thinking about a computer program which has ben given the name of Protegent 360 Security by its creators, Unistal Global Inc. which is designed to prevent malicious computer programs from entering your system which processes input as a series of ones and zeroes known as binary!")
-	elif command == 3:
+	elif command == "changelog":
 		print("     Ver 0.4      ") # app name: changelog
 		print(" Added copyright  ")
 		print("Added product num.")
 		print("LOADS of bugfixes ")
+		print("Moved changelog to")
+		print("  seperate file   ")
 		print("==================")
 		ask=input("Show more? 1:Yes 2:No >")
 		if ask==1:
@@ -84,11 +86,15 @@ while True:
 				print("Error 04: Invalid answer; exiting app")
 		else:
 			print("Error 04: Invalid answer; exiting app")
-	elif command == 10:
+	elif command == "exit":
 		sys.exit("exit::user requested exit")
-	elif command == 11:
-		print "Built", bd # app name: buildtime
-	elif command == 12:
-		print "GiraOS/P build", buildno # app name: buildcheck
+	elif command == "devcom": # ooo, secret menu!
+		command = input("Enter a developer command. >")
+		if command == buildtime:
+			print "Built", bd # app name: buildtime
+		elif command == buildcheck:
+			print "GiraOS/P build", buildno # app name: buildcheck
+		else:
+			print("Error 05: Invalid command")
 	else:
-		print("Error 05: Invalid command.") # only applies for numbers; text causes a crash
+		print("Error 05: Invalid command") # only applies for numbers; text causes a crash
