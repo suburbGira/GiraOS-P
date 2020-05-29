@@ -1,13 +1,13 @@
 copyright="GIRAsoft 2017/2018." # copy protection
-prodnum="GPN-PY-BE-GOSP06build1" # internal number for software cataloguing
+prodnum="GPN-PY-BE-GOSP07build1" # internal number for software cataloguing
 key="GIRA-SOFT" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="1 Mar 2018 @ 17:56 GMT" # build date for reference
-buildno="0.7 Beta, build 1.42 (7142)" # build information
-ver="Beta 0.7 (7142)" # version printed by ver
+bd="1 Mar 2018 @ 17:57 GMT" # build date for reference
+buildno="0.7 Beta, build 1.43 (7143)" # build information
+ver="Beta 0.7 (7143)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 test = "test"             # _
 verbose = "verbose"       #  |
@@ -105,7 +105,7 @@ while True:
 		else:
 			print("Error 04: Invalid answer; exiting app")
 	elif command == "ver": # app name: ver
-		print "GiraOS/P Version" ver "Copyright",copyright # print the version - like winver
+		print "GiraOS/P Version",ver,"Copyright",copyright # print the version - like winver
 	elif command == "sudo":
 		if sudostatus == 1:
 			print("Already superuser; nothing to do")
