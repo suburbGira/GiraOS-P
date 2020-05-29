@@ -5,14 +5,14 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="8 Feb 2018 @ 15:49 GMT" # build date for reference
-buildno="0.7 Beta, build 1.36 (7136)" # build information
-ver="Beta 0.7 (7136)" # version printed by ver
-GIRA-SOFT = "GIRA-SOFT"   # _
+bd="8 Feb 2018 @ 15:53 GMT" # build date for reference
+buildno="0.7 Beta, build 1.37 (7137)" # build information
+ver="Beta 0.7 (7137)" # version printed by ver
+GIRASOFT = "GIRASOFT"     # _
 test = "test"             #  |
 verbose = "verbose"       #  |
 changelog = "changelog"   #  |
-ver = "ver"               #  |---- finally fixed
+ver = "ver"               #  |---- _finally_ fixed
 sudo = "sudo"             #  |
 buildtime = "buildtime"   #  |
 buildcheck = "buildcheck" # _|
@@ -29,7 +29,7 @@ import sys # enable exiting from within
 print "GiraOS/P ver 0.7 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 # print("NOTE: Please input all non-numeric commands inside double quotes (\").") # FINALLY fixed
-checkkey=input("Enter your product key in double quotes (\") >") # make sure this is legal
+checkkey=input("Enter your product key >") # make sure this is legal
 if checkkey != key:
 	print("Error 01: Invalid key") # o noez, we're illegal
 	sys.exit("exit::invalid key")
