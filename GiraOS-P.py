@@ -5,11 +5,11 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="8 Feb 2018 @ 15:53 GMT" # build date for reference
-buildno="0.7 Beta, build 1.37 (7137)" # build information
-ver="Beta 0.7 (7137)" # version printed by ver
-GIRASOFT = "GIRASOFT"     # _
-test = "test"             #  |
+bd="8 Feb 2018 @ 15:58 GMT" # build date for reference
+buildno="0.7 Beta, build 1.38 (7138)" # build information
+ver="Beta 0.7 (7138)" # version printed by ver
+# GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
+test = "test"             # _
 verbose = "verbose"       #  |
 changelog = "changelog"   #  |
 ver = "ver"               #  |---- _finally_ fixed
@@ -29,10 +29,11 @@ import sys # enable exiting from within
 print "GiraOS/P ver 0.7 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 # print("NOTE: Please input all non-numeric commands inside double quotes (\").") # FINALLY fixed
-checkkey=input("Enter your product key >") # make sure this is legal
-if checkkey != key:
-	print("Error 01: Invalid key") # o noez, we're illegal
-	sys.exit("exit::invalid key")
+# checkkey=input("Enter your product key >") # make sure this is legal
+if 621743512==234234:
+#	print("Error 01: Invalid key") # o noez, we're illegal
+#	sys.exit("exit::invalid key")
+	print("bjhgj")
 else:
 	checkid=input("Enter your developer ID. >") # devs only
 	if checkid != devidsub:
