@@ -1,14 +1,13 @@
-copyright="GIRAsoft 2017/2018." # copy protection
+copyright="GIRAsoft 2017-2019." # copy protection
 prodnum="GPN-PY-BE-GOSP08build1" # internal number for software cataloguing
 # key="GIRASOFT" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="3 Mar 2018 @ 14:55 GMT" # build date for reference
-buildno="0.8 Beta, build 1.06 (8106)" # build information
-ver_="Beta 0.8 (8106)" # version printed by ver
-# GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
+bd="25 Jun 2019 @ 14:55 BST" # build date for reference
+buildno="0.8 Beta, build 1.07 (8107)" # build information
+ver_="Beta 0.8 (8107)" # version printed by ver
 calculate = "calculate"   # -
 test = "test"             #  |
 verbose = "verbose"       #  |
@@ -19,94 +18,44 @@ buildtime = "buildtime"   #  |
 buildcheck = "buildcheck" #  |
 exit ="exit"              # _|
 sudostatus=0 # if not declared here, causes a crash after input of developer id
-#GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
-#G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
-#G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
-#G               I     RRRRRRRR A   A     s       o     o f        t        2   0  0  0   1     7             2   0  0  0   1   8     8
-#G   GGGGGGG     I     R   R    AA   A     sssss  o     o ffff     t       2    0  0  0   1    7    -----    2    0  0  0   1    88888
-#G         G     I     R    R   A AA  A         s o     o f        t      2     0 0   0   1   7             2     0 0   0   1   8     8
-#G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1   8     8
-#GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  88888   DO NOT SELL THIS SOFTWARE
+#GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    99999
+#G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   9     9
+#G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   9     9
+#G               I     RRRRRRRR A   A     s       o     o f        t        2   0  0  0   1     7             2   0  0  0   1   9     9
+#G   GGGGGGG     I     R   R    AA   A     sssss  o     o ffff     t       2    0  0  0   1    7    -----    2    0  0  0   1    99999
+#G         G     I     R    R   A AA  A         s o     o f        t      2     0 0   0   1   7             2     0 0   0   1         9
+#G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1         9
+#GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  99999   DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print "GiraOS/P ver 0.8 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
+print("GiraOS/P ver 0.8 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software.") # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
-# print("NOTE: Please input all non-numeric commands inside double quotes (\").") # FINALLY fixed
-# checkkey=input("Enter your product key >") # make sure this is legal
-if 621743512==234234:
-#	print("Error 01: Invalid key") # o noez, we're illegal
-#	sys.exit("exit::invalid key")
-	print("bjhgj")
-else:
-	checkid=input("Enter your developer ID. >") # devs only
-	if checkid != devidsub:
-		if checkid != deviddark:
-			if checkid != devidshel:
-				if checkid != devidscythe:
-					print("Error 02: Invalid developer ID")
-					sys.exit("exit::invalid developer ID")
+checkid=input("Enter your developer ID. >") # devs only
+if checkid != devidsub:
+	if checkid != deviddark:
+		if checkid != devidshel:
+			if checkid != devidscythe:
+				print("Error 02: Invalid developer ID")
+				sys.exit("exit::invalid developer ID")
 while True:
 	if copyright != "GIRAsoft 2017/2018.": # make sure we're good
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
 	if sudostatus != 1:
-		command = input("Applications: test, verbose, changelog, ver, calculate, sudo, exit >") # hooray for commands
+		command = input("Applications: changelog, ver, calculate, sudo, exit >") # hooray for commands
 	else:
-		command = input("Applications: test, verbose, changelog, ver, calculate, sudo, buildtime, buildcheck, exit >")
-	if command == "test":
-		print("Testing") # app name: test
-		print("esting")
-		print("sting")
-		print("ting")
-		print("ing")
-		print("ng")
-		print("g")
-		print("done executing")
-	elif command == "verbose":
-		print("Expression of surprise or astonishment at the unintended performance of an undefined action!") # app name: verbose
-		print("I regret that the system which processes input as a series of ones and zeroes known as binary belonging to the organism known as a human who has been given the designation of me has performed an action which was not intended to be performed by its manufacturers!")
-		print("Additionally, the aforementioned problem has caused it to magnetise small spinning discs inside it in such a way that any data stored on them has been removed!")
-		print("However, to combat this from happening, I possessed a computer program which is designed to prevent this type of error from happening by stopping malicious data from editing the performance of my device which processes input as a series of ones and zeros known as binary!")
-		print("I regret to inform you that the aforementioned computer program possessed by you is currently insufficient to prevent the loss of data due to the unintended magnetisation and/or demagnetisation of small spinning discs inside the system which processes input as a series of ones and zeroes known as binary belonging to the organism known as a human who has been given the designation of you!")
-		print("The organism known as a human who has been given the designation of you possess the requirement to purchase a computer program which has ben given the name of Protegent 360 Security by its creators, Unistal Global Inc. which is designed to prevent malicious computer programs from entering your system which processes input as a series of ones and zeroes known as binary!")
-		print("The only computer software currently existing in the planet we are standing on which possesses the power to prevent the unintended magnetisation and/or demagnetisation of small spinning discs inside a system which processes input as a series of ones and zeroes known as binary in such a way that any data stored on them is lost!")
-		print("Use the organ known as a brain to perform the action of thinking beyond computer programs which prevent malicious computer programs entering systems which process input as a series of ones and zeros known as binary!")
-		print("Use the organ known as a brain to perform the action of thinking about a computer program which has ben given the name of Protegent 360 Security by its creators, Unistal Global Inc. which is designed to prevent malicious computer programs from entering your system which processes input as a series of ones and zeroes known as binary!")
-	elif command == "changelog":
-		print("     Ver 0.4      ") # app name: changelog
-		print(" Added copyright  ")
-		print("Added product num.")
-		print("LOADS of bugfixes ")
-		print("Removed changelog ")
-		print("==================")
-		ask=input("Show more? 1:Yes 2:No >")
-		if ask==1:
-			print("     Ver 0.3      ")
-			print("Added logo in code")
-			print("==================")
-			ask=input("Show more? 1:Yes 2:No >")
-			if ask==1:
-				print("     Ver 0.2     ")
-				print("Added Verboseness")
-				print("and rewrote comm-")
-				print("   and system.   ")
-				print("=================")
-				ask=input("Show more? 1:Yes 2:No >")
-				if ask==1:
-					print("     Ver 0.1     ")
-					print("   OS Created.   ")
-					print("=================")
-				elif ask==2:
-					exit
-				else:
-					print("Error 04: Invalid answer; exiting app")
-			elif ask==2:
-				exit
-			else:
-				print("Error 04: Invalid answer; exiting app")
-		else:
-			print("Error 04: Invalid answer; exiting app")
+		command = input("Applications: changelog, ver, calculate, sudo, buildtime, buildcheck, exit >")
+	if command == "changelog": # app name: changelog
+		print ("Changes in ",ver_,":")
+		print ("_________________________________________________________________")
+		print ("+ | Fixed some print statements to have brackets around quotes")
+		print ("- | Removed old changelog")
+		print ("+ | Added new changelog, now shows only changes in newest version")
+		print ("- | Removed Verbose")
+		print ("- | Removed Test")
+		print ("- | Removed commented-out code")
+		print ("__|______________________________________________________________")
 	elif command == "ver": # app name: ver
-		print "GiraOS/P Version",ver_,"Copyright",copyright # print the version - like winver
+		print ("GiraOS/P Version",ver_,"Copyright",copyright) # print the version - like winver
 	elif command == "sudo":
 		if sudostatus == 1:
 			print("Already superuser; nothing to do")
@@ -124,12 +73,12 @@ while True:
 		if sudostatus != 1:
 			print("Error 06: not a superuser")
 		else:
-			print "Built", bd # app name: buildtime
+			print ("Built", bd) # app name: buildtime
 	elif command == "buildcheck":
 		if sudostatus != 1:
 			print("Error 06: not a superuser")
 		else:
-			print "GiraOS/P version",buildno # app name: buildcheck
+			print ("GiraOS/P version",buildno) # app name: buildcheck
 	elif command=="calculate":
 		# GIRAsoft Calculator copyight GIRAsoft, Inc. 2018.
 		# Developed for use in GiraOS-P.
@@ -154,7 +103,7 @@ while True:
 				out=(num1*num2)
 			else:
 				print("Error 07: Invalid operand")
-			print "Your answer is:", out
+			print("Your answer is:", out)
 			calculate=input("Perform another calculation? (y/n) >")
 			if calculate != "y" and calculate != "n":
 				print("Error 08: Invalid answer.")
