@@ -5,9 +5,10 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="6 Feb 2018 @ 14:02 GMT" # build date for reference
-buildno="0.6 Beta, build 1.33 (6133)" # build information
-ver="Beta 0.6 (6133)" # version printed by ver
+bd="8 Feb 2018 @ 15:44 GMT" # build date for reference
+buildno="0.7 Beta, build 1.34 (7134)" # build information
+ver="Beta 0.7 (7134)" # version printed by ver
+GIRA-SOFT,test,verbose,changelog,ver,sudo,buildtime,buildcheck,exit="GIRA-SOFT","test","verbose","changelog","ver","sudo","buildtime","buildcheck","exit" # finally figured out how to fix it
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
@@ -18,9 +19,9 @@ sudostatus=0 # if not declared here, causes a crash after input of developer id
 #G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1   8     8
 #GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  88888   DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print "GiraOS/P ver 0.6 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
+print "GiraOS/P ver 0.7 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
-print("NOTE: Please input all non-numeric commands inside double quotes (\").") # kinda fixed
+# print("NOTE: Please input all non-numeric commands inside double quotes (\").") # FINALLY fixed
 checkkey=input("Enter your product key in double quotes (\") >") # make sure this is legal
 if checkkey != key:
 	print("Error 01: Invalid key") # o noez, we're illegal
@@ -30,7 +31,7 @@ else:
 	if checkid != devidsub:
 		if checkid != deviddark:
 			if checkid != devidshel:
-				if checkid != davidscythe:
+				if checkid != devidscythe:
 					print("Error 02: Invalid developer ID")
 					sys.exit("exit::invalid developer ID")
 while True:
