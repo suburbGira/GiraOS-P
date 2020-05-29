@@ -3,8 +3,8 @@ prodnum="GPN-PY-BE-GOSP05build1" # internal number for software cataloguing
 key="GIRA-BETA" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
-bd="5 Feb 2018 @ 12:23 GMT" # build date for reference
-buildno="0.5 Beta build 1:: build no 25"
+bd="5 Feb 2018 @ 12:30 GMT" # build date for reference
+buildno="0.5 Beta build 1:: build no 26"
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
@@ -14,7 +14,7 @@ buildno="0.5 Beta build 1:: build no 25"
 #G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1   8     8
 #GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  88888   DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print "GiraOS/P ver 0.4 build 2 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
+print "GiraOS/P ver 0.5 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 print("NOTE: Please input all non-numeric commands inside double quotes (\").") # kinda fixed
 checkkey=input("Enter your product key in double quotes (\") >") # make sure this is legal
@@ -90,9 +90,9 @@ while True:
 		sys.exit("exit::user requested exit")
 	elif command == "devcom": # ooo, secret menu!
 		command = input("Enter a developer command. >")
-		if command == buildtime:
+		if command == "buildtime":
 			print "Built", bd # app name: buildtime
-		elif command == buildcheck:
+		elif command == "buildcheck":
 			print "GiraOS/P build", buildno # app name: buildcheck
 		else:
 			print("Error 05: Invalid command")
