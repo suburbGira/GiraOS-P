@@ -5,9 +5,9 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="6 Feb 2018 @ 14:00 GMT" # build date for reference
-buildno="0.6 Beta, build 1.32" # build information
-ver="Beta 0.6 (6132)" # version printed by ver
+bd="6 Feb 2018 @ 14:02 GMT" # build date for reference
+buildno="0.6 Beta, build 1.33 (6133)" # build information
+ver="Beta 0.6 (6133)" # version printed by ver
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
