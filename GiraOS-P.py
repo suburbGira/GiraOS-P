@@ -1,9 +1,10 @@
 copyright="GIRAsoft 2017/2018." # copy protection
-prodnum="GPN-PY-BE-GOSP04" # internal number for software cataloguing
-key=12341234 # product key - antipiracy
+prodnum="GPN-PY-BE-GOSP04build2" # internal number for software cataloguing
+key="ABCD-EFGH" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
-bd="3 Feb 2018 @ 18:51 GMT" # build date for reference
+bd="5 Feb 2018 @ 12:10 GMT" # build date for reference
+buildno="0.4 Beta build 2:: build no 23"
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
@@ -13,10 +14,10 @@ bd="3 Feb 2018 @ 18:51 GMT" # build date for reference
 #G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1   8     8
 #GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  88888   DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print "GiraOS/P ver 0.4 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
+print "GiraOS/P ver 0.4 build 2 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 print("NOTE: Due to Python being weird, please use ONLY numbers as input.") # i don't know how to fix that, contact me if you do
-checkkey=input("Enter your product key. >") # make sure this is legal
+checkkey=input("Enter your product key in double quotes (\") >") # make sure this is legal
 if checkkey != key:
 	print("Error 01: Invalid key") # o noez, we're illegal
 	sys.exit("exit::invalid key")
@@ -54,6 +55,7 @@ while True:
 		print("     Ver 0.4      ") # app name: changelog
 		print(" Added copyright  ")
 		print("Added product num.")
+		print("LOADS of bugfixes ")
 		print("==================")
 		ask=input("Show more? 1:Yes 2:No >")
 		if ask==1:
@@ -75,14 +77,18 @@ while True:
 				elif ask==2:
 					exit
 				else:
-					print("Error: Invalid answer")
+					print("Error 04: Invalid answer")
 			elif ask==2:
 				exit
 			else:
-				print("Error: Invalid answer")
+				print("Error 04: Invalid answer")
+		else:
+			print("Error 04: Invalid answer")
 	elif command == 10:
 		sys.exit("exit::user requested exit")
 	elif command == 11:
 		print "Built", bd # app name: buildtime
+	elif command == 12:
+		print "GiraOS/P build", buildno # app name: buildcheck
 	else:
-		print("Invalid command.") # only applies for numbers; text causes a crash
+		print("Error 05: Invalid command.") # only applies for numbers; text causes a crash
