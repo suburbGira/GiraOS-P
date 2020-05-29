@@ -5,9 +5,9 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="3 Mar 2018 @ 14:54 GMT" # build date for reference
-buildno="0.8 Beta, build 1.05 (8105)" # build information
-ver_="Beta 0.8 (8105)" # version printed by ver
+bd="3 Mar 2018 @ 14:55 GMT" # build date for reference
+buildno="0.8 Beta, build 1.06 (8106)" # build information
+ver_="Beta 0.8 (8106)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 calculate = "calculate"   # -
 test = "test"             #  |
@@ -155,7 +155,7 @@ while True:
 			else:
 				print("Error 07: Invalid operand")
 			print "Your answer is:", out
-			calculate=input("Perform another calculation?")
+			calculate=input("Perform another calculation? (y/n) >")
 			if calculate != "y" and calculate != "n":
 				print("Error 08: Invalid answer.")
 	else:
