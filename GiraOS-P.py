@@ -5,9 +5,9 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="3 Mar 2018 @ 14:52 GMT" # build date for reference
-buildno="0.8 Beta, build 1.04 (8104)" # Reverted to version as of 3 Mar 2018 @ 14:48 GMT
-ver_="Beta 0.8 (8104)" # version printed by ver
+bd="3 Mar 2018 @ 14:54 GMT" # build date for reference
+buildno="0.8 Beta, build 1.05 (8105)" # build information
+ver_="Beta 0.8 (8105)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 calculate = "calculate"   # -
 test = "test"             #  |
@@ -133,20 +133,24 @@ while True:
 	elif command=="calculate":
 		# GIRAsoft Calculator copyight GIRAsoft, Inc. 2018.
 		# Developed for use in GiraOS-P.
-		y="y" # -|___GIRAsoft
-		n="n" # _|   Quoteless
+		y="y"
+		n="n"
+		add="add"
+		sub="sub"
+		mul="mul"
+		div="div"
 		calculate = y
 		while calculate==y:
 			num1=input("Enter first number. >")
-			operand=input("Enter operand (+ for add, - for subtract, * for multiply or / for divide) >")
+			operand=input("Enter operand (add for add, sub for subtract, mul for multiply or div for divide) >")
 			num2=input("Enter second number. >")
-			if operand == "+":
+			if operand == "add":
 				out=(num1+num2)
-			elif operand == "-":
+			elif operand == "sub":
 				out=(num1-num2)
-			elif operand == "/":
+			elif operand == "div":
 				out=(num1/num2)
-			elif operand == "*":
+			elif operand == "mul":
 				out=(num1*num2)
 			else:
 				print("Error 07: Invalid operand")
