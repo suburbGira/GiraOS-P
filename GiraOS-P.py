@@ -5,9 +5,9 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="1 Mar 2018 @ 17:54 GMT" # build date for reference
-buildno="0.7 Beta, build 1.40 (7140)" # build information
-ver="Beta 0.7 (7140)" # version printed by ver
+bd="1 Mar 2018 @ 17:55 GMT" # build date for reference
+buildno="0.7 Beta, build 1.41 (7141)" # build information
+ver="Beta 0.7 (7141)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 test = "test"             # _
 verbose = "verbose"       #  |
@@ -15,7 +15,8 @@ changelog = "changelog"   #  |
 ver = "ver"               #  |---- GIRAsoft Quoteless techology
 sudo = "sudo"             #  |
 buildtime = "buildtime"   #  |
-buildcheck = "buildcheck" # _|
+buildcheck = "buildcheck" #  |
+exit ="exit"              # _|
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
