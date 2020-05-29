@@ -1,13 +1,13 @@
 copyright="GIRAsoft 2017/2018." # copy protection
-prodnum="GPN-PY-BE-GOSP05build2" # internal number for software cataloguing
-key="GIRA-BETA" # product key - antipiracy
+prodnum="GPN-PY-BE-GOSP06build1" # internal number for software cataloguing
+key="GIRA-SOFT" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="6 Feb 2018 @ 13:33 GMT" # build date for reference
-buildno="0.5 Beta, build 2.30" # build information
-ver="Beta 0.5 (5230)" # version printed by ver
+bd="6 Feb 2018 @ 13:48 GMT" # build date for reference
+buildno="0.6 Beta, build 1.31" # build information
+ver="Beta 0.6 (6131)" # version printed by ver
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
@@ -17,7 +17,7 @@ ver="Beta 0.5 (5230)" # version printed by ver
 #G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0   1   8     8
 #GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  11111  88888   DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print "GiraOS/P ver 0.5 build 2 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
+print "GiraOS/P ver 0.6 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software." # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 print("NOTE: Please input all non-numeric commands inside double quotes (\").") # kinda fixed
 checkkey=input("Enter your product key in double quotes (\") >") # make sure this is legal
@@ -36,7 +36,10 @@ while True:
 	if copyright != "GIRAsoft 2017/2018.": # make sure we're good
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
-	command = input("Applications: test, verbose, changelog, ver, exit >") # hooray for commands
+	if sudostatus != 1:
+		command = input("Applications: test, verbose, changelog, ver, sudo, exit >") # hooray for commands
+	else:
+		command = input("Applications: test, verbose, changelog, ver, sudo, buildtime, buildcheck, exit >")
 	if command == "test":
 		print("Testing") # app name: test
 		print("esting")
@@ -93,15 +96,28 @@ while True:
 			print("Error 04: Invalid answer; exiting app")
 	elif command == "ver": # app name: ver
 		print "GiraOS/P Version",ver,"Copyright",copyright # print the version - like winver
+	elif command == "sudo":
+		if sudostatus == 1:
+			print("Already superuser; nothing to do")
+		else:
+			print("Enter your Developer ID for verification.")
+			sudoid=input(">")
+			if sudoid != checkid:
+				print("Error 02: invalid Developer ID")
+			else:
+				print("You are now a SUPERUSER. You now have priveledges to run superuser apps. Be careful...")
+				sudostatus=1
 	elif command == "exit":
 		sys.exit("exit::user requested exit")
-	elif command == "devcom": # ooo, secret menu!
-		command = input("Enter a developer command. >")
-		if command == "buildtime":
-			print "Built", bd # app name: buildtime
-		elif command == "buildcheck":
-			print "GiraOS/P version",buildno # app name: buildcheck
+	elif command == "buildtime":
+		if sudostatus != 1:
+			print("Error 06: not a superuser")
 		else:
-			print("Error 05: Invalid command")
+			print "Built", bd # app name: buildtime
+	elif command == "buildcheck":
+		if sudostatus != 1:
+			print("Error 06: not a superuser")
+		else:
+			print "GiraOS/P version",buildno # app name: buildcheck
 	else:
-		print("Error 05: Invalid command") # only applies for numbers; text causes a crash
+		print("Error 05: Invalid command") # only applies for numbers (and ver for some reason); text causes a crash
