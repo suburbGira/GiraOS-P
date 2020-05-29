@@ -1,13 +1,13 @@
 copyright="GIRAsoft 2017/2018." # copy protection
-prodnum="GPN-PY-BE-GOSP07build1" # internal number for software cataloguing
-key="GIRA-SOFT" # product key - antipiracy
+prodnum="GPN-PY-BE-GOSP08build1" # internal number for software cataloguing
+# key="GIRASOFT" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="3 Mar 2018 @ 12:04 GMT" # build date for reference
-buildno="0.7 Beta, build 1.45 (7145)" # build information
-ver_="Beta 0.7 (7145)" # version printed by ver
+bd="3 Mar 2018 @ 14:48 GMT" # build date for reference
+buildno="0.8 Beta, build 1.01 (8101)" # build information
+ver_="Beta 0.8 (8101)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 test = "test"             # -
 verbose = "verbose"       #  |
@@ -48,9 +48,9 @@ while True:
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
 	if sudostatus != 1:
-		command = input("Applications: test, verbose, changelog, ver, sudo, exit >") # hooray for commands
+		command = input("Applications: test, verbose, changelog, ver, calculate, sudo, exit >") # hooray for commands
 	else:
-		command = input("Applications: test, verbose, changelog, ver, sudo, buildtime, buildcheck, exit >")
+		command = input("Applications: test, verbose, changelog, ver, calculate, sudo, buildtime, buildcheck, exit >")
 	if command == "test":
 		print("Testing") # app name: test
 		print("esting")
@@ -129,5 +129,29 @@ while True:
 			print("Error 06: not a superuser")
 		else:
 			print "GiraOS/P version",buildno # app name: buildcheck
+	elif command=="calculate":
+		# GIRAsoft Calculator copyight GIRAsoft, Inc. 2018.
+		# Developed for use in GiraOS-P.
+		y="y" # -|___GIRAsoft
+		n="n" # _|   Quoteless
+		calculate = y
+		while calculate==y:
+			num1=input("Enter first number. >")
+			operand=input("Enter operand (+ for add, - for subtract, * for multiply or / for divide) >")
+			num2=input("Enter second number. >")
+			if operand == "+":
+				out=(num1+num2)
+			elif operand == "-":
+				out=(num1-num2)
+			elif operand == "/":
+				out=(num1/num2)
+			elif operand == "*":
+				out=(num1*num2)
+			else:
+				print("Error 07: Invalid operand")
+			print "Your answer is:", out
+			calculate=input("Perform another calculation?")
+			if calculate != "y" and calculate != "n":
+				print("Error 08: Invalid answer.")
 	else:
 		print("Error 05: Invalid command") # only applies for numbers (and ver for some reason); text causes a crash
