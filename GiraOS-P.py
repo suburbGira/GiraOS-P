@@ -5,10 +5,17 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="8 Feb 2018 @ 15:45 GMT" # build date for reference
-buildno="0.7 Beta, build 1.35 (7135)" # build information
-ver="Beta 0.7 (7135)" # version printed by ver
-GIRA-SOFT,test,verbose,changelog,ver,sudo,buildtime,buildcheck="GIRA-SOFT","test","verbose","changelog","ver","sudo","buildtime","buildcheck" # finally figured out how to fix it
+bd="8 Feb 2018 @ 15:49 GMT" # build date for reference
+buildno="0.7 Beta, build 1.36 (7136)" # build information
+ver="Beta 0.7 (7136)" # version printed by ver
+GIRA-SOFT = "GIRA-SOFT"   # _
+test = "test"             #  |
+verbose = "verbose"       #  |
+changelog = "changelog"   #  |
+ver = "ver"               #  |---- finally fixed
+sudo = "sudo"             #  |
+buildtime = "buildtime"   #  |
+buildcheck = "buildcheck" # _|
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
