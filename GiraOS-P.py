@@ -5,14 +5,14 @@ devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
 devidshel=3207
 devidscythe=4088
-bd="8 Feb 2018 @ 15:58 GMT" # build date for reference
-buildno="0.7 Beta, build 1.38 (7138)" # build information
-ver="Beta 0.7 (7138)" # version printed by ver
+bd="1 Mar 2018 @ 17:47 GMT" # build date for reference
+buildno="0.7 Beta, build 1.39 (7139)" # build information
+ver="Beta 0.7 (7139)" # version printed by ver
 # GIRASOFT = "GIRASOFT" # its free anyways, we dont need no product key... it was just so i could say 'hey look, my software can has product key!'
 test = "test"             # _
 verbose = "verbose"       #  |
 changelog = "changelog"   #  |
-ver = "ver"               #  |---- _finally_ fixed
+ver = "ver"               #  |---- GIRAsoft Quoteless techology
 sudo = "sudo"             #  |
 buildtime = "buildtime"   #  |
 buildcheck = "buildcheck" # _|
@@ -74,8 +74,7 @@ while True:
 		print(" Added copyright  ")
 		print("Added product num.")
 		print("LOADS of bugfixes ")
-		print("Moved changelog to")
-		print("  seperate file   ")
+		print("Removed changelog ")
 		print("==================")
 		ask=input("Show more? 1:Yes 2:No >")
 		if ask==1:
@@ -115,7 +114,7 @@ while True:
 			if sudoid != checkid:
 				print("Error 02: invalid Developer ID")
 			else:
-				print("You are now a SUPERUSER. You now have priveledges to run superuser apps. Be careful...")
+				print("You are now a SUPERUSER. You now have priviledges to run superuser apps. Be careful...")
 				sudostatus=1
 	elif command == "exit":
 		sys.exit("exit::user requested exit")
