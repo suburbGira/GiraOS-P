@@ -3,8 +3,10 @@ prodnum="GPN-PY-BE-GOSP05build1" # internal number for software cataloguing
 key="GIRA-BETA" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
-bd="5 Feb 2018 @ 12:31 GMT" # build date for reference
-buildno="0.5 Beta build 1:: build no 27"
+devidshel=3207
+devidscythe=4088
+bd="5 Feb 2018 @ 19:59 GMT" # build date for reference
+buildno="0.5 Beta build 1.28"
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
@@ -25,8 +27,10 @@ else:
 	checkid=input("Enter your developer ID. >") # devs only
 	if checkid != devidsub:
 		if checkid != deviddark:
-			print("Error 02: Invalid developer ID")
-			sys.exit("exit::invalid developer ID")
+			if checkid != devidshel:
+				if checkid != davidscythe:
+					print("Error 02: Invalid developer ID")
+					sys.exit("exit::invalid developer ID")
 while True:
 	if copyright != "GIRAsoft 2017/2018.": # make sure we're good
 		print("Error 03: Invalid Copyright message")
