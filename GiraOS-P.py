@@ -3,8 +3,8 @@ prodnum="GPN-PY-BE-GOSP05build1" # internal number for software cataloguing
 key="GIRA-BETA" # product key - antipiracy
 devidsub=1963 # developer id list here - makes sure only devs can access beta
 deviddark=2729
-bd="5 Feb 2018 @ 12:30 GMT" # build date for reference
-buildno="0.5 Beta build 1:: build no 26"
+bd="5 Feb 2018 @ 12:31 GMT" # build date for reference
+buildno="0.5 Beta build 1:: build no 27"
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   11    88888
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 1 1   8     8
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0   1   8     8
@@ -31,7 +31,7 @@ while True:
 	if copyright != "GIRAsoft 2017/2018.": # make sure we're good
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
-	command = input("Applications: test, verbose, changelog, exit: ") # hooray for commands
+	command = input("Applications: test, verbose, changelog, exit >") # hooray for commands
 	if command == "test":
 		print("Testing") # app name: test
 		print("esting")
