@@ -1,17 +1,8 @@
 copyright="GIRAsoft 2017-2020." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="30 May 2020 @ 11:11 BST" # build date for reference
-buildno="0.9 Beta, build 1.02 (9102)" # build information
-ver_="Beta 0.9 (9102)" # version printed by ver
-calculate = "calculate"   # -
-test = "test"             #  |
-verbose = "verbose"       #  |
-changelog = "changelog"   #  |
-ver = "ver"               #  |---- GIRAsoft Quoteless techology
-sudo = "sudo"             #  |
-buildtime = "buildtime"   #  |
-buildcheck = "buildcheck" #  |
-exit ="exit"              # _|
+bd="30 May 2020 @ 11:12 BST" # build date for reference
+buildno="0.9 Beta, build 1.02 (9103)" # build information
+ver_="Beta 0.9 (9103)" # version printed by ver
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   00000 
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 0    00
