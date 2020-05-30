@@ -1,8 +1,8 @@
 copyright="GIRAsoft 2017-2020." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="30 May 2020 @ 00:28 BST" # build date for reference
-buildno="0.9 Beta, build 1.01 (9101)" # build information
-ver_="Beta 0.9 (9101)" # version printed by ver
+bd="30 May 2020 @ 11:11 BST" # build date for reference
+buildno="0.9 Beta, build 1.02 (9102)" # build information
+ver_="Beta 0.9 (9102)" # version printed by ver
 calculate = "calculate"   # -
 test = "test"             #  |
 verbose = "verbose"       #  |
@@ -40,7 +40,7 @@ while True:
 			print("Already superuser; nothing to do")
 		else:
 			print("You are now a SUPERUSER. You now have priviledges to run superuser apps. Be careful...")
-				sudostatus=1
+			sudostatus=1
 	elif command == "exit":
 		sys.exit("exit::user requested exit")
 	elif command == "buildtime":
@@ -59,7 +59,7 @@ while True:
 		# Copyright GIRAsoft, Inc. 2020.
 		# Developed for GiraOS-P.
 		instonks=y
-		while instonks=y:
+		while instonks==y:
 			stonks1=input("Input first number: ")
 			stonks2=input("Now input second number: ")
 			if stonks1 > stonks2:
@@ -86,21 +86,49 @@ while True:
 		calculate = y
 		while calculate==y:
 			num1=input("Enter first number. >")
-			operand=input("Enter operand (add for add, sub for subtract, mul for multiply or div for divide) >")
-			num2=input("Enter second number. >")
-			if operand == "add":
-				out=(num1+num2)
-			elif operand == "sub":
-				out=(num1-num2)
-			elif operand == "div":
-				out=(num1/num2)
-			elif operand == "mul":
-				out=(num1*num2)
-			else:
-				print("Error 07: Invalid operand")
-			print("Your answer is:", out)
-			calculate=input("Perform another calculation? (y/n) >")
-			if calculate != "y" and calculate != "n":
-				print("Error 08: Invalid answer.")
+			try:
+				num1=int(num1)
+			except ValueError:
+				try:
+					num1=float(num1)
+				except ValueError:
+					print("Error: Input not a number.")
+					calculate=n
+			if calculate==y:
+				operand=input("Enter operand (add for add, sub for subtract, mul for multiply or div for divide) >")
+				if operand != add:
+					if operand !=sub:
+						if operand != mul:
+							if operand != div:
+								print("Error: Invalid operand.")
+								calculate=n
+				if calculate==y:
+					num2=input("Enter second number. >")
+					try:
+						num2=int(num2)
+					except ValueError:
+						try:
+							num2=float(num2)
+						except ValueError:
+							print("Error: Input not a number.")
+							calculate=n
+					if calculate==y:
+						if operand == "add":
+							out=(num1+num2)
+						elif operand == "sub":
+							out=(num1-num2)
+						elif operand == "div":
+							if num2 != 0:
+								out=(num1/num2)
+							elif num2 == 0:
+								out=("Error: Cannot divide by zero.")
+						elif operand == "mul":
+							out=(num1*num2)
+						else:
+							print("Error 07: Invalid operand")
+						print("Your answer is:", out)
+						calculate=input("Perform another calculation? (y/n) >")
+						if calculate != "y" and calculate != "n":
+							print("Error 08: Invalid answer.")
 	else:
-		print("Error 05: Invalid command") # only applies for numbers (and ver for some reason); text causes a crash
+		print("Error 05: Invalid command")
