@@ -1,8 +1,8 @@
 copyright="GIRAsoft 2017-2020." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="30 May 2020 @ 11:12 BST" # build date for reference
-buildno="0.9 Beta, build 1.02 (9103)" # build information
-ver_="Beta 0.9 (9103)" # version printed by ver
+bd="30 May 2020 @ 11:13 BST" # build date for reference
+buildno="0.9 Beta, build 1.02 (9104)" # build information
+ver_="Beta 0.9 (9104)" # version printed by ver
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   00000 
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 0    00
@@ -70,10 +70,6 @@ while True:
 		# Developed for use in GiraOS-P.
 		y="y"
 		n="n"
-		add="add"
-		sub="sub"
-		mul="mul"
-		div="div"
 		calculate = y
 		while calculate==y:
 			num1=input("Enter first number. >")
