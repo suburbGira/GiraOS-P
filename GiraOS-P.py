@@ -1,8 +1,8 @@
 copyright="GIRAsoft 2017-2021." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
 bd="11 Jan 2021 @ 20:41 GMT" # build date for reference
-buildno="0.9 Beta, build 1.08 (9108)" # build information
-ver_="Beta 0.9 (9108)" # version printed by ver
+buildno="0.9 Beta, build 1.09 (9109)" # build information
+ver_="Beta 0.9 (9109)" # version printed by ver
 sudostatus=0
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   111 
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 1  1   
@@ -83,10 +83,10 @@ while True:
 					calculate=n
 			if calculate==y:
 				operand=input("Enter operand (add for add, sub for subtract, mul for multiply or div for divide) >")
-				if operand != add:
-					if operand !=sub:
-						if operand != mul:
-							if operand != div:
+				if operand != "add":
+					if operand != "sub":
+						if operand != "mul":
+							if operand != "div":
 								print("Error: Invalid operand.")
 								calculate=n
 				if calculate==y:
