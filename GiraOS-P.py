@@ -1,22 +1,22 @@
-copyright="GIRAsoft 2017-2020." # copy protection
+copyright="GIRAsoft 2017-2021." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="30 May 2020 @ 11:13 BST" # build date for reference
-buildno="0.9 Beta, build 1.02 (9104)" # build information
-ver_="Beta 0.9 (9104)" # version printed by ver
+bd="11 Jan 2021 @ 14:43 GMT" # build date for reference
+buildno="0.9 Beta, build 1.05 (9105)" # build information
+ver_="Beta 0.9 (9105)" # version printed by ver
 sudostatus=0 # if not declared here, causes a crash after input of developer id
-#GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   00000 
-#G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 0    00
-#G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0      2  0   0 0
-#G               I     RRRRRRRR A   A     s       o     o f        t        2   0  0  0   1     7             2   0  0  0     2   0  0  0
-#G   GGGGGGG     I     R   R    AA   A     sssss  o     o ffff     t       2    0  0  0   1    7    -----    2    0  0  0    2    0  0  0
-#G         G     I     R    R   A AA  A         s o     o f        t      2     0 0   0   1   7             2     0 0   0   2     0 0   0
-#G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0  2      00    0
-#GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  2222222  00000  DO NOT SELL THIS SOFTWARE
+#GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   111 
+#G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 1  1   
+#G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0      2     1   
+#G               I     RRRRRRRR A   A     s       o     o f        t        2   0  0  0   1     7             2   0  0  0     2      1   
+#G   GGGGGGG     I     R   R    AA   A     sssss  o     o ffff     t       2    0  0  0   1    7    -----    2    0  0  0    2       1   
+#G         G     I     R    R   A AA  A         s o     o f        t      2     0 0   0   1   7             2     0 0   0   2        1   
+#G         G     I     R     R  A   AA A  s     s o     o f        t     2      00    0   1   7            2      00    0  2         !   
+#GGGGGGGGGGG IIIIIIIII R      R A     AAA  sssss   ooooo  f        t    2222222  00000  11111 7           2222222  00000  2222222 1111111  DO NOT SELL THIS SOFTWARE
 import sys # enable exiting from within
-print("GiraOS/P ver 0.8 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software.") # print the copyright and gpl notice
+print("GiraOS/P ver 0.9 build 1 -- copyright", copyright," You should have recieved a copy of the GNU GPL with this software. If not, you can find it on the Internet, or in most Linux software.") # print the copyright and gpl notice
 print("DO NOT ATTEMPT TO SELL THIS SOFTWARE. IF YOU HAVE PAID FOR THIS SOFTWARE, PLEASE CONTACT greatgiratheepic@gmail.com!") # this was written in linux by one person - it should be free
 while True:
-	if copyright != "GIRAsoft 2017-2020.": # make sure we're good
+	if copyright != "GIRAsoft 2017-2021.": # make sure we're good
 		print("Error 03: Invalid Copyright message")
 		sys.exit("exit::invalid copyright")
 	if sudostatus != 1:
