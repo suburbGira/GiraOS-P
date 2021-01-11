@@ -1,8 +1,8 @@
 copyright="GIRAsoft 2017-2021." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="11 Jan 2021 @ 14:43 GMT" # build date for reference
-buildno="0.9 Beta, build 1.05 (9105)" # build information
-ver_="Beta 0.9 (9105)" # version printed by ver
+bd="11 Jan 2021 @ 14:46 GMT" # build date for reference
+buildno="0.9 Beta, build 1.06 (9106)" # build information
+ver_="Beta 0.9 (9106)" # version printed by ver
 sudostatus=0 # if not declared here, causes a crash after input of developer id
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   111 
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 1  1   
@@ -25,7 +25,7 @@ while True:
 		command = input("Applications: ver, calc, sudo, buildtime, buildcheck, stonks, exit >")
 
 	if command == "ver": # app name: ver
-		print ("GiraOS/P Version",ver_,"Copyright",copyright) # print the version - like winver
+		print("GiraOS/P Version",ver_,"Copyright",copyright) # print the version - like winver
 	elif command == "sudo":
 		if sudostatus == 1:
 			print("Already superuser; nothing to do")
@@ -38,7 +38,7 @@ while True:
 		if sudostatus != 1:
 			print("Error 06: not a superuser")
 		else:
-			print ("Built", bd) # app name: buildtime
+			print("Built", bd) # app name: buildtime
 	elif command == "buildcheck":
 		if sudostatus != 1:
 			print("Error 06: not a superuser")
