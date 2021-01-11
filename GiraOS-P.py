@@ -1,9 +1,8 @@
 copyright="GIRAsoft 2017-2021." # copy protection
 prodnum="GPN-PY-BE-GOSP09build1" # internal number for software cataloguing
-bd="11 Jan 2021 @ 14:46 GMT" # build date for reference
-buildno="0.9 Beta, build 1.06 (9106)" # build information
-ver_="Beta 0.9 (9106)" # version printed by ver
-sudostatus=0 # if not declared here, causes a crash after input of developer id
+bd="11 Jan 2021 @ 20:38 GMT" # build date for reference
+buildno="0.9 Beta, build 1.07 (9107)" # build information
+ver_="Beta 0.9 (9107)" # version printed by ver
 #GGGGGGGGGGG IIIIIIIII RRRRRRRR AA                                       22222   00000   11   77777        22222   00000   22222   111 
 #G               I     R      R A A        sssss   ooooo   ffff    t    2     2 0    00 1 1       7       2     2 0    00 2     2 1  1   
 #G               I     R      R A  A      s     s o     o f    f ttttt       2  0   0 0   1      7             2  0   0 0      2     1   
@@ -30,7 +29,7 @@ while True:
 		if sudostatus == 1:
 			print("Already superuser; nothing to do")
 		else:
-			print("You are now a SUPERUSER. You now have priviledges to run superuser apps. Be careful...")
+			print("You are now a SUPERUSER. You now have privileges to run superuser apps. Be careful...")
 			sudostatus=1
 	elif command == "exit":
 		sys.exit("exit::user requested exit")
